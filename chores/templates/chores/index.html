@@ -1,0 +1,9 @@
+{% if list_of_chores %}
+    <ul>
+    {% for chore in list_of_chores %}
+        <li><a href="/chores/{{ chore.id }}/">{{ chore.chore_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Geen taken beschikbaar.</p>
+{% endif %}

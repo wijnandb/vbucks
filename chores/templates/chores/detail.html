@@ -1,0 +1,8 @@
+<h1>{{ chore.chore_text }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'chores:claim' chore.id %}" method="post">
+{% csrf_token %}
+<input type="submit" value="Claim">
+</form>
