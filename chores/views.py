@@ -14,8 +14,8 @@ def user(request, user_id):
     return HttpResponse("Behaalde punten en voltooide klussen van %s." % user_id)
 
 #@login_required(login_url='/admin')
-def claim(request, user_id, chore_id):
-    return HttpResponse("Claim klus %s door zoon %s." % (chore_id, user_id))
+def claim(request, chore_id):
+    return HttpResponse("Claim klus %s door zoon." % chore_id)
 
 #def claim_chore(request, chore_id):
 #    if request.method == 'POST':

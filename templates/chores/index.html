@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
 {% if list_of_chores %}
     <ul>
     {% for chore in list_of_chores %}
@@ -7,3 +10,5 @@
 {% else %}
     <p>Geen taken beschikbaar.</p>
 {% endif %}
+
+{% endblock %}
